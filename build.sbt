@@ -12,4 +12,11 @@ libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.4",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+) ++ appDependencies
+
+val appDependencies = Seq (
+  "com.lightbend.akka" %% "akka-stream-alpakka-slick" % "1.1.2",
+  "org.postgresql"      % "postgresql"            % "42.2.5",
+  "com.typesafe.slick"  %% "slick-hikaricp"       % "3.3.0",
+  "com.h2database" % "h2" % "1.4.200"
 )
