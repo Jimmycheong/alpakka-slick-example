@@ -6,12 +6,17 @@ import akka.stream.ActorMaterializer
 import akka.stream.alpakka.slick.scaladsl._
 import akka.stream.scaladsl._
 import slick.jdbc.GetResult
-import slick.lifted
 
 import scala.concurrent.Future
-import scala.util.{Failure, Success, Try}
+import scala.util.{Failure, Success}
 
-object App {
+/**
+ *  Basic streaming application to insert rows into a PostGreSQL database table
+ *
+ *  Uses Alpakka slick library to create a Sink using SQL statements
+ */
+
+object StreamAppExample1 {
 
   implicit val system = ActorSystem()
   implicit val ec = system.dispatcher
